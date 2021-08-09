@@ -1,0 +1,11 @@
+.bank-container3 {
+  background-color: rgb(131, 131, 202);
+  height: 100vh;
+  padding-top: 10px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
