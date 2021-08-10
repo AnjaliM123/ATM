@@ -7,6 +7,7 @@ import Account from "./components/Account";
 import Home from "./components/Home";
 import Profile from "./components/Profile";
 import Summary from "./components/Summary";
+import NotFound from "./components/NotFound";
 
 export const history = createBrowserHistory();
 
@@ -19,6 +20,7 @@ const App = () => {
         <Route exact path="/account" component={Account} />
         <Route exact path="/profile" component={Profile} />
         <Route exact path="/logout" component={Summary} />
+        <Route component={NotFound} />
       </Switch>
     </BrowserRouter>
   );
