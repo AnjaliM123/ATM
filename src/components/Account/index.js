@@ -1,7 +1,8 @@
 import { Component } from "react";
 
 import AccountForm from "../AccountForm";
-
+import Cookies from "js-cookie";
+import { Redirect } from "react-router-dom";
 import "./index.css";
 
 const denominationsList = [
@@ -58,6 +59,10 @@ class Account extends Component {
   getFirstCharOfName = (name) => name.slice(0, 1);
 
   render() {
+    const jwtToken = Cookies.get("jwt_token");
+    if (jwtToken === undefined) {
+      return <Redirect to="/" />;
+    }
     const name = "Marella Anjali";
     const initial = this.getFirstCharOfName(name);
 

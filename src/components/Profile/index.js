@@ -1,6 +1,13 @@
+import Cookies from "js-cookie";
+import { Redirect } from "react-router-dom";
 import "./index.css";
 
 const Profile = () => {
+  const jwtToken = Cookies.get("jwt_token");
+  if (jwtToken === undefined) {
+    return <Redirect to="/" />;
+  }
+
   const getBalance = () => {
     let balance3 = localStorage.getItem("balance");
     const parseBalance1 = JSON.parse(balance3);

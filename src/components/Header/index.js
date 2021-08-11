@@ -1,8 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
+import Cookies from "js-cookie";
 import "./index.css";
 
-const Header = () => {
+const Header = (props) => {
+  const { history } = props;
+  const onClickLogout = () => {
+    Cookies.remove("jwt_token");
+    history.replace("/");
+  };
   return (
     <div>
       <div className="main-container1">
@@ -17,13 +23,13 @@ const Header = () => {
           <Link to="/profile" className="link">
             Profile
           </Link>
-          <Link to="/logout" className="link">
+          <button type="button" className="button1" onClick={onClickLogout}>
             Logout
-          </Link>
+          </button>
         </div>
       </div>
     </div>
   );
 };
 
-export default Header;
+export default withRouter(Header);

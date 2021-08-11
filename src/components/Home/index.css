@@ -9,3 +9,37 @@
   align-content: center;
   align-items: center;
 }
+
+.login-button1 {
+  background-color: transparent;
+  border-radius: 10px;
+  border-width: 1px;
+  margin-top: 10px;
+  border-color: #150b3e;
+  width: 50px;
+  height: 30px;
+  font-family: "Roboto";
+}
+
+.input-label1 {
+  font-family: "Roboto";
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+.username-input-filed1 {
+  width: 50%;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  height: 23px;
+  border-color: #150b3e;
+  border-width: 1px;
+}
+.password-input-filed1 {
+  width: 50%;
+  margin-left: 10px;
+  border-radius: 10px;
+  height: 23px;
+  border-color: #150b3e;
+  border-width: 1px;
+}

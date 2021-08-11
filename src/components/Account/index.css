@@ -90,6 +90,9 @@
     margin-top: 8px;
   }
 }
+.withdraw {
+  margin-left: 10px;
+}
 
 .balance-amount {
   color: #d4d2db;
