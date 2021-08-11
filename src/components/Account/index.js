@@ -29,7 +29,6 @@ class Account extends Component {
     balance: 0,
     count: 0,
   };
-
   updateCount = (value) => {
     console.log(value);
 
@@ -39,8 +38,8 @@ class Account extends Component {
     const { count } = this.state;
     const balance5 = localStorage.getItem("balance");
     const balance7 = JSON.parse(balance5);
-    if (balance7 >= 500) {
-      this.setState((prevState) => ({ balance: prevState.balance - count }));
+    if (parseInt(balance7) > count) {
+      this.setState({ balance: balance7 - count });
     } else {
       return alert("Insufficient Balance");
     }
@@ -48,13 +47,16 @@ class Account extends Component {
 
   updateBalance1 = () => {
     const { count } = this.state;
-
-    this.setState((prevState) => ({ balance: prevState.balance + count }));
+    const balance5 = localStorage.getItem("balance");
+    const balance7 = JSON.parse(balance5);
+    this.setState({
+      balance: balance7 + count,
+    });
   };
   onChangeBalance = () => {
     const { balance } = this.state;
     const balance1 = localStorage.setItem("balance", JSON.stringify(balance));
-    return balance1;
+    this.setState({ balance: balance1 });
   };
   getFirstCharOfName = (name) => name.slice(0, 1);
 

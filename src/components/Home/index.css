@@ -20,7 +20,10 @@
   height: 30px;
   font-family: "Roboto";
 }
-
+.error-message1 {
+  color: rgba(201, 14, 14, 0.63);
+  font-family: "Roboto";
+}
 .input-label1 {
   font-family: "Roboto";
   font-size: 17px;
@@ -34,6 +37,7 @@
   height: 23px;
   border-color: #150b3e;
   border-width: 1px;
+  font-family: "Roboto";
 }
 .password-input-filed1 {
   width: 50%;
@@ -42,4 +46,5 @@
   height: 23px;
   border-color: #150b3e;
   border-width: 1px;
+  font-family: "Roboto";
 }

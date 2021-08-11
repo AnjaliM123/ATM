@@ -95,7 +95,7 @@ class Home extends Component {
           <button type="submit" className="login-button1">
             Login
           </button>
-          {showSubmitError && <p className="error-message">*{errorMsg}</p>}
+          {showSubmitError && <p className="error-message1">*{errorMsg}</p>}
         </form>
       </div>
     );
