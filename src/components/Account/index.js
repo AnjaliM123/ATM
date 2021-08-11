@@ -38,7 +38,7 @@ class Account extends Component {
     const { count } = this.state;
     const balance5 = localStorage.getItem("balance");
     const balance7 = JSON.parse(balance5);
-    if (parseInt(balance7) > count) {
+    if (parseInt(balance7) >= count) {
       this.setState({ balance: balance7 - count });
     } else {
       return alert("Insufficient Balance");
